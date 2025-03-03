@@ -2,8 +2,10 @@
   #include<string>
   using namespace std;
   
-  int main(){
-      
+  class Automation {
+      public:
+      void function (){
+          
       int n, no,age, id;
       string name;
        
@@ -32,6 +34,13 @@
            cout << i+1 << "  " << name << "   " << age << " " << id << endl;
           
       }
+      }
+      
+  };
+  
+  int main(){
+      Automation a;
+      a.function();
       
       return 0;
   }
