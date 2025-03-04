@@ -37,10 +37,50 @@
       }
       
   };
+
+  void Main_Display(){
+    int choice;
+
+    cout << "Home Menu: " << endl << endl;
+    cout << "\t1. New Account" << endl;
+    cout << "\t2. SignUp" << endl;
+    cout << "\t3. Log Out " << endl << endl;
+
+    cout << "Enter your choice: ";
+    cin >> choice;
+    cout << endl;
+
+    if(choice = 1){
+
+        cout << "\t1. New Account" << endl;
+        cout << endl;
+    }
+
+    else if(choice = 2){
+
+        cout << "\t2. SignUp" << endl;
+        cout << endl;
+
+    }
+
+    else if(choice = 3){
+
+        cout << "Sucessfully Log Out" << endl;
+        exit(0);
+
+    }
+
+    else{
+        cout << "ERROR: Try Again " << endl << endl;
+    }
+
+
+  }
   
   int main(){
       Automation a;
-      a.function();
+      Main_Display();
+     // a.function();
       
       return 0;
   }
