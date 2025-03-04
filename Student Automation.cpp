@@ -50,20 +50,20 @@
     cin >> choice;
     cout << endl;
 
-    if(choice = 1){
+    if(choice == 1){
 
         cout << "\t1. New Account" << endl;
         cout << endl;
     }
 
-    else if(choice = 2){
+    else if(choice == 2){
 
         cout << "\t2. SignUp" << endl;
         cout << endl;
 
     }
 
-    else if(choice = 3){
+    else if(choice == 3){
 
         cout << "Sucessfully Log Out" << endl;
         exit(0);
@@ -80,7 +80,7 @@
   int main(){
       Automation a;
       Main_Display();
-     // a.function();
+      a.function();
       
       return 0;
   }
