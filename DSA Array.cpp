@@ -30,7 +30,30 @@ class Array{
     }
 
     void problem_3(){
+        int n;
+cout << "Enter Array size: ";
+cin >> n;
 
+int array[n];
+
+cout << "Enter Your Elements:" << endl;
+for(int i = 0; i< n; i++){
+    cout << "Element[" << i + 1 << "]: ";
+    cin >> array[i];
+}
+int x;
+cout << "Insert Element in the Front: ";
+cin >> x;
+
+for(int i = n; i> 0; i--){
+        array[i] = array[i-1];
+}
+array[0] = x;
+n++;
+cout << "Enter Your Elements:" << endl;
+for(int i = 0; i< n; i++){
+    cout << array[i] << ", ";
+}
     }
 
     void problem_4(){
@@ -93,7 +116,6 @@ class Array{
         }
         cout << endl;
     }
-
     }
 
     void problem_10(){
@@ -136,7 +158,6 @@ class Array{
         }
         cout << endl;
     }
-
     }
 
     void problem_11(){
