@@ -3,124 +3,144 @@ using namespace std;
 
 class Array{
     public:
-    
+
     void problem_1(){
-        int n;
-    cout << "\nEnter your array size: ";
+     int n;
+    cout << "Enter your array size: ";
     cin >> n;
 
-    int array[n + 1]; // Increased size to accommodate the new element
+    int array[n+1];
 
-    cout << "\nEnter your Elements: " << endl;
-    for (int i = 0; i < n; i++) {
-        cout << "Element [" << i + 1 << "]: ";
+    cout << "\nEnter Elements : " << endl;
+    for(int i = 0; i < n; i++){
+        cout << "Elements[" << i+1 << "] : ";
         cin >> array[i];
     }
 
-    int x;
-    cout << "\nEnter element to insert at the beginning: ";
-    cin >> x;
+    cout << "Display Elements: "<< endl;
 
-    // Shift elements to the right
-    for (int i = n; i > 0; i--) {
-        array[i] = array[i - 1];
+    for(int i = 0 ; i < n; i++){
+        cout << array[i] << ", ";
     }
-    
-    // Insert the new element at the beginning
-    array[0] = x;
-    n++; // Increase the array size counter
-
-    cout << "\nYour Elements: " << endl;
-    for (int i = 0; i < n; i++) {
-        cout << array[i] << " ";
-    }
-    cout << endl;
 
     }
-    
+
     void problem_2(){
         // Later
     }
 
     void problem_3(){
-        int n;
-    cout << "\nEnter your array size: ";
-    cin >> n;
 
-    int array[n + 1]; // Extra space for new element
-
-    cout << "\nEnter your Elements: " << endl;
-    for (int i = 0; i < n; i++) {
-        cout << "Element [" << i + 1 << "]: ";
-        cin >> array[i];
-    }
-
-    int x, pos;
-    cout << "\nEnter element to insert: ";
-    cin >> x;
-    cout << "Enter index (0 to " << n << "): ";
-    cin >> pos;
-
-    if (pos < 0 || pos > n) {
-        cout << "\nInvalid index!";
-        //return 1;
-    }
-
-    for (int i = n; i > pos; i--) {
-        array[i] = array[i - 1];
-    }
-    
-    array[pos] = x;
-    n++;
-
-    cout << "\nYour updated elements: " << endl;
-    for (int i = 0; i < n; i++) {
-        cout << array[i] << " ";
-    }
-    cout << endl;
-        
     }
 
     void problem_4(){
-         int n, pos;
 
-    cout << "Enter size of the array: ";
-    cin >> n;
-    
-    int arr[n + 1];
-    
-    cout << "Enter elements in array: "<< endl;
-    for(int i = 0; i < n; i++) {
-        cout << "Element[" << i +1 << "] : ";
-        cin >> arr[i];
-    }
-    
-    cout << "\nEnter the element position that you want to delete: ";
-    cin >> pos;
-    
-    if(pos > n || pos <= 0) {
-        cout << "Invalid position! Please enter a position between 1 to " << n << endl;
-    } else {
-        for(int i = pos - 1; i < n - 1; i++) {
-            arr[i] = arr[i + 1];
-        }
-        n--;
-        
-        cout << "Array elements after deletion: ";
-        for(int i = 0; i < n; i++) {
-            cout << arr[i] << ", ";
-        }
-        cout << endl;
-    }
-        
     }
 
     void problem_5(){
-        
+
     }
 
     void problem_6(){
-        
+
+    }
+
+    void problem_7(){
+
+    }
+
+    void problem_8(){
+
+    }
+
+    void problem_9(){
+            cout << "First Matrix: " << endl;
+    int row,col;
+    cout << "Enter Row Number: ";
+    cin >> row;
+
+    cout << "Enter Column Number: ";
+    cin >> col;
+
+    int matrix[row][col];
+    int matrix1[row][col];
+    int matrix3[row][col];
+
+    cout << "\nEnter First Matrix: " << endl;
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            cout << "Matrix[" << i+1 << "][" << j+1 << "]: ";
+            cin >> matrix[i][j];
+        }
+    }
+
+
+    cout << "\nEnter Second Matrix: " << endl;
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            cout << "Matrix[" << i+1 << "][" << j+1 << "]: ";
+            cin >> matrix1[i][j];
+        }
+    }
+
+     cout << "\nMatrix Addition: " << endl;
+
+
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            matrix3[i][j] = matrix[i][j] + matrix1[i][j];
+            cout << matrix3[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    }
+
+    void problem_10(){
+            cout << "First Matrix: " << endl;
+    int row,col;
+    cout << "Enter Row Number: ";
+    cin >> row;
+
+    cout << "Enter Column Number: ";
+    cin >> col;
+
+    int matrix[row][col];
+    int matrix1[row][col];
+    int matrix3[row][col];
+
+    cout << "\nEnter First Matrix: " << endl;
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            cout << "Matrix[" << i+1 << "][" << j+1 << "]: ";
+            cin >> matrix[i][j];
+        }
+    }
+
+
+    cout << "\nEnter Second Matrix: " << endl;
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            cout << "Matrix[" << i+1 << "][" << j+1 << "]: ";
+            cin >> matrix1[i][j];
+        }
+    }
+
+     cout << "\nMatrix Subtraction: " << endl;
+
+
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            matrix3[i][j] = matrix[i][j] - matrix1[i][j];
+            cout << matrix3[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    }
+
+    void problem_11(){
+
     }
 
 };
@@ -128,42 +148,118 @@ class Array{
 void Display(){
     Array a;
     int choice;
-    cout << "\t--->>DSA Array<<---" << endl<< endl;
-    cout << "\t1. Insert in the first" << endl;
-    cout << "\t2. Insert in the last" << endl;
-    cout << "\t3. Inset in an index" << endl;
-    cout << "\t4. Delete any index" << endl;
-    cout << "\t5. Exit" << endl;
 
-    cout << "\nEnetr your choice: ";
+    cout << "\t--->>DSA Array<<---" << endl<< endl;
+    cout << "\t1. Insert Array Element" << endl;
+    cout << "\t2. Insert Element at the Specific Position in array" << endl;
+    cout << "\t3. Insert Element at the Front" << endl;
+    cout << "\t4. Insert Element at the End" << endl << endl;
+
+    cout << "\t5. Deleting Element from a linear Array" << endl;
+    cout << "\t6. Delete Element at the Specific Position in array" << endl;
+    cout << "\t7. Delete Element at the Front" << endl;
+    cout << "\t8. Delete Element at the End" << endl << endl;
+
+    cout << "\t9. Matrix Addition" <<endl;
+    cout << "\t10. Matrix Subtraction" <<endl;
+    cout << "\t11. Matrix multiplication" <<endl;
+    cout << "\t12. Exit" << endl;
+
+    cout << "\nEnter your choice: ";
     cin >> choice;
     cout << endl;
 
     if(choice == 1){
-        cout << "-->>Insert in the first<<---" << endl << endl;
+        cout << "-->>Insert Array Element<<---" << endl << endl;
         a.problem_1();
     }
+
     else if(choice ==2){
-        cout << "-->>Insert in the last<<---" << endl<< endl;
+        cout << "-->>Insert Element at the Specific Position in array<<---" << endl<< endl;
         a.problem_2();
     }
-    
+
     else if(choice == 3){
-        cout << "-->>Inset in an index<<---" << endl<< endl;
+        cout << "-->>Insert Element at the Front<<---" << endl<< endl;
         a.problem_3();
     }
-    
+
     else if(choice == 4){
-        cout << "-->>Delete any index<<---" << endl << endl;
+        cout << "-->>Insert Element at the End<<---" << endl << endl;
         a.problem_4();
     }
-    
+
     else if(choice == 5){
+        cout << "-->>Insert Element at the End<<---" << endl << endl;
+        a.problem_5();
+    }
+
+        else if(choice == 6){
+        cout << "-->>Delete Element at the Specific Position in array<<---" << endl << endl;
+        a.problem_4();
+    }
+
+        else if(choice == 7){
+        cout << "-->>Delete Element at the Front<<---" << endl << endl;
+        a.problem_7();
+    }
+
+        else if(choice == 8){
+        cout << "-->>Delete Element at the End<<---" << endl << endl;
+        a.problem_8();
+    }
+
+        else if(choice == 9){
+        cout << "-->>Matrix Addition<<---" << endl << endl;
+        int choice;
+        a.problem_9();
+        //Display();
+
+        cout << "\nDo You want Run this program (YES/NO):" << endl;
+        cout << "1. YES" << endl;
+        cout << "2. NO" <<endl;
+        cout << "3. Exit" << endl;
+
+        cout << "\nEnter your Choice: ";
+        cin >> choice;
+
+        if(choice == 1){
+
+            a.problem_9();
+            cout << endl;
+        }
+
+        else if(choice == 2){
+            Display();
+        }
+
+        else if(choice == 3){
+                cout << "Successfully  Exit..." <<endl;
+                exit(0);
+
+        }
+        else{
+            cout << "ERROR! Try Again..." << endl;
+        }
+    }
+
+        else if(choice == 10){
+        cout << "-->>Matrix Subtraction<<---" << endl << endl;
+        a.problem_10();
+    }
+
+        else if(choice == 11){
+        cout << "-->>Matrix multiplication<<---" << endl << endl;
+        a.problem_11();
+    }
+
+    else if(choice == 12){
         cout << "-->>Successfully Exit<<---" << endl;
         cout << "\t....Thank You very Much" << endl;
-        cout << "For starying with us....♥" << endl;
+        cout << "For staying with us...." << endl;
         exit(0);
     }
+
     else{
         cout << "ERROR! Try Again" << endl << endl;
         Display();
