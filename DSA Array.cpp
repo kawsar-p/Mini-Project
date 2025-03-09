@@ -28,7 +28,36 @@ class Array{
     }
 
     void problem_2(){
-        // Later
+        int n, num, pos;
+    
+    cout << "Enter size of the array: ";
+    cin >> n;
+    int arr[n];
+
+    cout << "Enter elements in array: "<< endl;
+    for (int i = 0; i < n; i++) {
+        cout << "Element[" << i+1 << "]: ";
+        cin >> arr[i];
+    }
+
+    cout << "\nEnter element to insert: ";
+    cin >> num;
+    cout << "Enter the element position: ";
+    cin >> pos;
+
+
+        for (int i = n; i >= pos; i--) {
+            arr[i] = arr[i - 1];
+        }
+
+        arr[pos - 1] = num;
+        n++;
+
+        cout << "\nArray elements after insertion: ";
+        for (int i = 0; i < n; i++) {
+            cout << arr[i] << ", ";
+        }
+        cout << endl;
     }
 
     void problem_3(){
