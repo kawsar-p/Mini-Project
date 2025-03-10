@@ -169,6 +169,28 @@ for(int i = 0; i< n; i++){
     }
 
     void problem_7(){
+        int n;
+    cout << "Enter Size: ";
+    cin >> n;
+    
+    int array[n];
+    cout << "\nEnter Elements: " << endl;
+    for(int i =0; i < n ; i++){
+        cout << "Elements[" << i << "]: ";
+        cin >> array[i];
+    }
+    
+    
+    for(int i = 1 ; i<n; i++){
+        array[i-1]= array[i];
+    }
+    n--;
+    
+    cout << "\nDisplay Elements: " << endl;
+    for(int i =0; i < n ; i++){
+       
+        cout << array[i]<< ", ";
+    }
 
     }
 
