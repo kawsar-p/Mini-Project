@@ -113,10 +113,58 @@ for(int i = 0; i< n; i++){
     }
 
     void problem_5(){
+        int n;
+    cout << "Enter the size of the array: ";
+    cin >> n;
+    
+    int array[n];
+    cout << "\nEnter the elements of the array: " << endl;
+    for(int i = 0; i < n; i++){
+        cout << "Element[" << i << "]: ";
+        cin >> array[i];
+    }
+    
+    int pos;
+    cout << "Enter the position of the array element you want to delete: ";
+    cin >> pos;
+    
+    for(int i = pos; i < n - 1; i++){
+        array[i] = array[i + 1];
+    }
+    n--;
+    
+    cout << "\nDisplaying the elements of the array: " << endl;
+    for(int i = 0; i < n; i++){
+        cout << array[i] << ", ";
+    }
 
     }
 
     void problem_6(){
+        int n;
+    cout << "Enter the size of the array: ";
+    cin >> n;
+    
+    int array[n];
+    cout << "\nEnter the elements of the array: " << endl;
+    for(int i = 0; i < n; i++){
+        cout << "Element[" << i << "]: ";
+        cin >> array[i];
+    }
+    
+    int pos;
+    cout << "Enter the position of the array element you want to delete: ";
+    cin >> pos;
+    
+    for(int i = pos; i < n - 1; i++){
+        array[i] = array[i + 1];
+    }
+    n--;
+    
+    cout << "\nDisplaying the elements of the array: " << endl;
+    for(int i = 0; i < n; i++){
+        cout << array[i] << ", ";
+    }
 
     }
 
