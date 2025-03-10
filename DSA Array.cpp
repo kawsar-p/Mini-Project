@@ -88,6 +88,27 @@ for(int i = 0; i< n; i++){
     }
 
     void problem_4(){
+        int n;
+    cout << "Enter size: ";
+    cin >> n;
+    int array[n];
+
+    for(int i = 0; i < n; i++){
+        cout << "Elements[" << i+1 << "]: ";
+        cin >> array[i];
+    }
+
+    int x;
+    cout << "\nEnter value for last Index: ";
+    cin >> x;
+    
+    array[n] = x;
+    n++;
+
+    cout << "\nNew Display Array" << endl;
+    for(int i = 0; i < n; i++){
+        cout << array[i] << ", ";
+    }
 
     }
 
