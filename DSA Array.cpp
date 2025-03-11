@@ -195,6 +195,22 @@ for(int i = 0; i< n; i++){
     }
 
     void problem_8(){
+            int n;
+    cout << "Enter array Size: ";
+    cin >> n;
+    int array[n];
+    
+    cout << "\nEnter Array Elements: "<< endl;
+    for(int i=0; i < n; i++){
+        cout << "Elements[" <<i+1<< "]: ";
+        cin >> array[i];
+    }
+    
+    n--;
+    cout << "\nDisplay Elements: ";
+        for(int i=0; i < n; i++){
+            cout << array[i]<< ", ";
+    }
 
     }
 
